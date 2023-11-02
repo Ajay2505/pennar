@@ -22632,6 +22632,10 @@
             background-color: rgba(0,0,0,0.5);
         }
 
+        .elementor-element-c6a7d35 .owl-carousel .owl-item > div  {
+            background-color: inherit;
+        }
+
         .elementor-15311 .elementor-element.elementor-element-fcd0ba2 .author-name {
             font-size: 22px;
         }
