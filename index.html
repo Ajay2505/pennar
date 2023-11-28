@@ -2100,6 +2100,7 @@
                                     </div>
                                 </section>
 
+                                <!-- Special Text -->
                                 <section class="elementor-section elementor-top-section elementor-element elementor-element-ca2f648 elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default" data-id="ca2f648" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
                                     <div class="elementor-container elementor-column-gap-default">
                                         <div class="elementor-row">
@@ -2112,8 +2113,8 @@
                                                             data-widget_type="industrium_special_text.default">
                                                             <div class="elementor-widget-container">
                                                                 <div class="special-text-wrapper"><span
-                                                                        class="special-text special-text-effect-fill">Everyday innovation<span
-                                                                            class="special-text special-text-effect-stroke">Everyday innovation</span></span>
+                                                                        class="special-text special-text-effect-fill">Everyday <br> innovation<span
+                                                                            class="special-text special-text-effect-stroke">Everyday <br> innovation</span></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -4197,16 +4198,14 @@
                             class="widget footer-widget widget_industrium_request_contacts_widget">
                             <div class="widget-wrapper footer-widget-wrapper">
                                 <div class="request_contacts-widget-wrapper">
-                                    <div class="request_contacts-widget-row">
+                                    <div class="request_contacts-widget-row align-items-center">
                                         <div class="request_contacts-widget-content">
                                             <h2 class="request_contacts-title">We are always ready to help you and
                                                 answer your questions</h2>
                                         </div>
-                                        <div class="request_contacts-button"><a href="/themes/industrium/contacts/"
-                                                class="industrium-button" target="_blank">Contact us<svg
-                                                    viewBox="0 0 13 20">
-                                                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5"></polyline>
-                                                </svg></a></div>
+                                        <div class="request_contacts-button">
+                                            <button class="enqBtn">Enquire Now</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -4394,6 +4393,33 @@
 
 
         </footer>
+
+        <!-- Modal -->
+        <div class="customModal">
+            <div class="modal_content">
+                <h3 class="blue_color hstack justify-content-between">
+                    Send Message
+                    <a class="closeModal" href="#">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </div>
+                    </a>
+                </h3>
+                <form class="mainForm">
+                    <input type="text" placeholder="Your Name">
+                    <div class="hstack flex-nowrap gap-3">
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Phone">
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button>Send Message</button>
+                </form>
+            </div>
+        </div>
+        <!-- <button class="fixed_btn">Download Brochure</button> -->
         <div class="footer-scroll-top"><button class="fontello icon-arrow-up" aria-label="Scroll Up"></button></div>
     </div>
     <!-- Instagram Feed JS -->
@@ -5213,6 +5239,17 @@
       },
         });
         // mySwiper-prev
+        const enqBtn = document.querySelectorAll(".enqBtn");
+        if (enqBtn) {
+            enqBtn.forEach(btn => {
+                btn.addEventListener("click", evt => {
+                    document.querySelector(".customModal").classList.add("active");
+                });
+            })
+        }
+        document.querySelector(".closeModal").addEventListener("click", evt => {
+            document.querySelector(".customModal").classList.remove("active");
+        });
     </script>
 </body>
 

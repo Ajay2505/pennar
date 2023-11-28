@@ -22916,6 +22916,10 @@
     font-weight: bold !important;
 }
 
+.align-items-center {
+    align-items: center !important;
+}
+
 .fs-5 {
     font-size: 20px;
 }
@@ -22933,6 +22937,18 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.gap-3 {
+    gap: 20px;
 }
 
 .presenceLinks > *:not(:last-child) {
@@ -22968,8 +22984,86 @@
 }
 
 .elementor-15311 .elementor-element.elementor-element-48be2db .special-text {
-    font-size: clamp(40px, 9vw, 110px);
+    font-size: clamp(40px, 9vw, 140px);
     text-transform: uppercase;
     width: 100%;
     letter-spacing: -2.6px;
+}
+
+.enqBtn {
+    background-color: #fff !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    /* border: 1px solid #253d97 !important; */
+    font-size: 22px;
+}
+
+.enqBtn:hover {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    background-color: #253d97 !important;
+}
+
+.enqBtn::after {
+    content: none !important;
+}
+
+.customModal {
+    position: fixed;
+    inset: 0;
+    z-index: 1099;
+    display: grid;
+    place-items: center;
+    transform: translateX(-100%);
+    background-color: rgba(0,0,0,0.4);
+    transition: transform .3s ease-in;
+}
+
+.customModal.active {
+    transform: translateX(0);
+}
+
+.customModal .modal_content {
+    padding: 20px 40px;
+    border-radius: 12px;
+    min-width: 50%;
+    background-color: #fff;
+}
+
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+}
+
+.mainForm input,
+.mainForm textarea {
+    width: 100%;
+    padding: 10px 12px 10px 17px;
+    background-color: #f8f8fa;
+    border: 1px solid #f8f8fa;
+}
+
+.mainForm input:focus,
+.mainForm textarea:focus {
+    background-color: #fff;
+    border: 1px solid #253d97;
+}
+
+.mainForm button {
+    width: fit-content;
+    color: #fff;
+    padding: 7px 14px !important;
+    border: 1px solid #fff;
+    background-color: #253d97 !important;
+}
+
+.mainForm button:hover {
+    border: 1px solid #253d97;
+    color: #000;
+    background-color: #fff !important;
+}
+
+.mainForm button::after  {
+    content: none !important;
 }
