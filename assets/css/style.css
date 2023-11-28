@@ -22908,6 +22908,43 @@
     display: block !important;
 }
 
+.m-0 {
+    margin: 0 !important;
+}
+
+.fw-bold {
+    font-weight: bold !important;
+}
+
+.fs-5 {
+    font-size: 20px;
+}
+
+.fs-xs {
+    font-size: 18px;
+}
+
+.blue_color {
+    color: #253d97;
+}
+
+.hstack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.presenceLinks > *:not(:last-child) {
+    border-right: 1px solid #E6E9EB;
+}
+
+.hstack.cols-3 > * {
+    width: 33.3333%;
+    flex-shrink: 0;
+    padding: 0 20px;
+}
+
 .mySwiperBtns {
     width: 100%;
     display: flex;
@@ -22924,4 +22961,15 @@
     background-image: none !important;
     background-size: 0 !important;
     padding-right: 0 !important;
+}
+
+.elementor-15311 .elementor-element.elementor-element-d8fd731 {
+    margin-top: 140px;
+}
+
+.elementor-15311 .elementor-element.elementor-element-48be2db .special-text {
+    font-size: clamp(40px, 9vw, 110px);
+    text-transform: uppercase;
+    width: 100%;
+    letter-spacing: -2.6px;
 }
