@@ -394,7 +394,7 @@
 
 
 
-        <div class="header-mobile-button"><a class="industrium-button" href="/themes/industrium/contacts">Get In
+        <div class="header-mobile-button"><a class="industrium-button enqFormTrigger" href="#">Get In
                 Touch<svg viewBox="0 0 13 20">
                     <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5"></polyline>
                 </svg></a></div>
@@ -867,8 +867,8 @@
 
                 <!-- Right Info Block -->
                 <div class="header-icons-container icons-container-big">
-                    <div class="header-icon header-button-container"><a class="industrium-button"
-                            href="/themes/industrium/contacts">Get In Touch</a></div>
+                    <div class="header-icon header-button-container"><a class="industrium-button enqFormTrigger"
+                            href="#">Get In Touch</a></div>
                 </div>
             </div>
         </header>
@@ -1076,8 +1076,8 @@
 
                 <!-- Right Info Block -->
                 <div class="header-icons-container icons-container-big">
-                    <div class="header-icon header-button-container"><a class="industrium-button"
-                            href="/themes/industrium/contacts">Get In Touch</a></div>
+                    <div class="header-icon header-button-container"><a class="industrium-button enqFormTrigger"
+                            href="#">Get In Touch</a></div>
                 </div>
             </div>
         </header>
@@ -1683,11 +1683,14 @@
                                                                             <div class="card_wrapper">
                                                                                 <div class="content_wrapper">
                                                                                     <h4 class="title">Structural Engineering Services</h4>
+                                                                                    <div class="absolute_block">
+                                                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque quasi eligendi omnis sed eos in fuga mollitia inventore est laboriosam quos, iure perferendis assumenda vitae soluta fugiat! Voluptates, fuga odit!</p>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="swiper-slide">
-                                                                            <div class="card_wrapper">
+                                                                            <div style="background-image: url('https://8ded8880.rocketcdn.me/themes/industrium/wp-content/uploads/2022/08/alain-pham-P_qvsF7Yodw-unsplash-640x770.jpg');" class="card_wrapper">
                                                                                 <div class="content_wrapper">
                                                                                     <h4 class="title">BIM</h4>
                                                                                     <div class="absolute_block">
@@ -1697,16 +1700,22 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="swiper-slide">
-                                                                            <div class="card_wrapper">
+                                                                            <div style="background-image: url('https://8ded8880.rocketcdn.me/themes/industrium/wp-content/uploads/2022/08/ant-rozetsky-SLIFI67jv5k-unsplash-1-640x770.jpg');" class="card_wrapper">
                                                                                 <div class="content_wrapper">
                                                                                     <h4 class="title">Plant & Product Engineering Services</h4>
+                                                                                    <div class="absolute_block">
+                                                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque quasi eligendi omnis sed eos in fuga mollitia inventore est laboriosam quos, iure perferendis assumenda vitae soluta fugiat! Voluptates, fuga odit!</p>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="swiper-slide">
-                                                                            <div class="card_wrapper">
+                                                                            <div style="background-image: url('https://8ded8880.rocketcdn.me/themes/industrium/wp-content/uploads/2022/04/anton-shakirov-k6pXI12U9ek-unsplash-640x770.jpg');" class="card_wrapper">
                                                                                 <div class="content_wrapper">
                                                                                     <h4 class="title">INDUSTRIAL AUTOMATION</h4>
+                                                                                    <div class="absolute_block">
+                                                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque quasi eligendi omnis sed eos in fuga mollitia inventore est laboriosam quos, iure perferendis assumenda vitae soluta fugiat! Voluptates, fuga odit!</p>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -4204,7 +4213,7 @@
                                                 answer your questions</h2>
                                         </div>
                                         <div class="request_contacts-button">
-                                            <button class="enqBtn">Enquire Now</button>
+                                            <button class="enqBtn enqFormTrigger">Enquire Now</button>
                                         </div>
                                     </div>
                                 </div>
@@ -4395,7 +4404,7 @@
         </footer>
 
         <!-- Modal -->
-        <div class="customModal">
+        <div class="customModal enqModal">
             <div class="modal_content">
                 <h3 class="blue_color hstack justify-content-between">
                     Send Message
@@ -4419,7 +4428,10 @@
                 </form>
             </div>
         </div>
-        <!-- <button class="fixed_btn">Download Brochure</button> -->
+        <button class="fixed_btn">Download Brochure</button>
+        <a class="callIcon" href="#">
+            <img src="https://www.pennarindia.com/devtest/img/phone.png" alt="">
+        </a>
         <div class="footer-scroll-top"><button class="fontello icon-arrow-up" aria-label="Scroll Up"></button></div>
     </div>
     <!-- Instagram Feed JS -->
@@ -5239,17 +5251,38 @@
       },
         });
         // mySwiper-prev
-        const enqBtn = document.querySelectorAll(".enqBtn");
+        const enqBtn = document.querySelectorAll(".enqFormTrigger");
         if (enqBtn) {
             enqBtn.forEach(btn => {
                 btn.addEventListener("click", evt => {
-                    document.querySelector(".customModal").classList.add("active");
+                    document.querySelector(".enqModal").classList.add("active");
+                    document.body.classList.add("overflow-hidden");
                 });
             })
         }
-        document.querySelector(".closeModal").addEventListener("click", evt => {
-            document.querySelector(".customModal").classList.remove("active");
-        });
+        const closeModalBtns = document.querySelectorAll(".closeModal");
+        if (closeModalBtns) {
+            closeModalBtns.forEach(btn => {
+                btn.addEventListener("click", evt => {
+                    document.querySelector(".customModal.active").classList.remove("active");
+                    document.body.classList.remove("overflow-hidden");
+                });
+            });
+        }        
+        const customModals = document.querySelectorAll(".customModal");
+        if (customModals) {
+            customModals.forEach(modal => {
+                modal.addEventListener("click", evt => {
+                    document.querySelector(".customModal.active").classList.remove("active");  
+                    document.body.classList.remove("overflow-hidden");                  
+                });
+                const modalBody = modal.querySelector(".modal_content");
+                if (modalBody) {
+                    modalBody.addEventListener("click", evt => evt.stopPropagation());
+                }
+            });
+        }
+
     </script>
 </body>
 
