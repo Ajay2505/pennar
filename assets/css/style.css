@@ -22943,6 +22943,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    align-items: normal;
 }
 
 .flex-nowrap {
@@ -22990,10 +22991,13 @@
 }
 
 .elementor-15311 .elementor-element.elementor-element-48be2db .special-text {
-    font-size: clamp(40px, 9vw, 140px);
+    font-size: clamp(40px, 5.5vw, 120px);
     text-transform: uppercase;
     width: 100%;
-    letter-spacing: -2.6px;
+    /* letter-spacing: -2.6px; */
+    letter-spacing: 1px;
+    line-height: 1.1;
+    white-space: initial;
 }
 
 .enqBtn {
@@ -23096,8 +23100,8 @@
     position: fixed;
     right: 10px;
     bottom: 100px;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     z-index: 99;
     padding: 5px;
     border-radius: 50%;
@@ -23105,4 +23109,119 @@
     display: inline-block;    
     box-shadow: 0px 0 30px rgba(26, 54, 85, 0.20);
     background-color: #253d97;
+}
+
+
+.accordion-header {
+    margin-top: 0;
+}
+
+.accordion-item {
+    border-top: 1px solid #d5d8dc;
+}
+
+.accordion-flush .accordion-item .accordion-body {
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+}
+
+.accordion-flush .accordion-item .accordion-header {
+    margin-bottom: 0;
+}
+
+.accordion-flush .accordion-item .accordion-header button {
+    color: #000;    
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.accordion-flush .accordion-item .accordion-header button:focus,
+.accordion-flush .accordion-item .accordion-header button:hover {
+    box-shadow: none;
+    background-color: #fff !important;
+}
+
+.accordion-button {
+    display: flex;
+    gap: 0 10px;
+    text-transform: none;
+    font-size: 18px;
+    justify-content: space-between;
+}
+
+.main_acc .accordion-button::after {
+    content: none !important;
+}
+
+.accordion-button .plus_wrapper {
+    width: 10px;
+    height: 10px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    flex-shrink: 0;
+    /* background-color: #fff; */
+}
+
+.accordion-button .plus_wrapper::before,
+.accordion-button .plus_wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000;
+    transition: transform .3s ease-in;
+}
+
+.accordion-button .plus_wrapper::after {
+    transform: rotate(-90deg);
+}
+
+
+.accordion-button:not(.collapsed) .plus_wrapper::after {
+    transform: rotate(0);
+}
+
+
+.accordion-button:not(.collapsed) {
+    background-color: #191817;
+    color: #fff;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+.accordion-flush .accordion-item .accordion-header button:hover {
+    background-color: #191817;
+}
+
+.accordion-flush .accordion-item:first-child {
+    border-top: 1px solid #d5d8dc;
+}
+
+.accordion-flush .accordion-item:last-child {
+    border-bottom: 1px solid #d5d8dc;
+}
+
+.accordion-item .accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.main_spacer {
+    padding-block: 100px !important;
+}
+
+.main_spacer_bottom {
+    padding-bottom: 100px !important;
+}
+
+.accordian_section .img_wrapper {
+    max-width: 400px;
 }
