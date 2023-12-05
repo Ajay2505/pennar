@@ -23511,12 +23511,18 @@
 
 .bgImg_section .bgSwiper-pagination {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 5px;
+    flex-wrap: nowrap;
+}
+
+.bgSwiper .img_wrapper {
+    max-width: 400px;
 }
 
 .bgImg_section .swiper-slide {
-    padding-block: 50px;
+    /* padding-block: 50px; */
+    display: flex;
+    justify-content: center;
 }
 
 .bgImg_section .bgSwiper-pagination .swiper-pagination-bullet {
