@@ -22669,6 +22669,7 @@
     opacity: 1;
     width: 4px;
     height: 4px;
+    /* opacity: 0; */
     text-align: center;
     border-radius: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -22677,13 +22678,18 @@
     transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
 }
 
+.map-point.active {
+    opacity: 1;
+}
+
 .map-point::before,
 .map-point::after {
     content: "";
     position: absolute;
     width: 4px;
     height: 4px;
-    background-color: #253d97;
+    background-color: #c1c8e4;
+    /* background-color: #253d97; */
     border-radius: 50%;
     top: calc(50% - 4px);
     left: calc(50% - 4px);
@@ -22700,6 +22706,11 @@
         opacity: 0;
     }
 }
+/* 
+.map-point.marker-Tennessee {
+    right: 34%;
+    bottom: 23%;
+} */
 
 .map-point.marker-0 {
     top: 29.4%;
@@ -23672,4 +23683,10 @@
 
 .bgImg-next svg {
     transform: rotate(180deg);
+}
+
+@media (max-width: 1390px) {
+    body:not(.rtl) .elementor-15311 .elementor-element.elementor-element-6c65a26 {
+        bottom: -100px;
+    }
 }
