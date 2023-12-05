@@ -23653,3 +23653,17 @@
 .mt-50 {
     margin-top: 50px;
 }
+
+.bgImg-next,
+.bgImg-prev {
+    width: 30px;
+    height: 30px;
+    /* color: #253d97; */
+    display: grid;
+    place-items: center;    
+    /* background-color: #fff; */
+}
+
+.bgImg-next svg {
+    transform: rotate(180deg);
+}

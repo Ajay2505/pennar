@@ -2203,20 +2203,29 @@
                                                 our engineering brilliance. With a strong focus on precision,
                                                 quality and the use of advanced technology, we continue to
                                                 meet evolving market demands. </p> -->
-                                            <div class="swiper bgSwiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
-                                                <div class="swiper-wrapper" id="swiper-wrapper-b7cddcd695136c3d" aria-live="polite">
-                                                    <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 2">
-                                                        <p class="fs-4 m-0 fw-bold">FACILITY</p>
-                                                        <p class="mt-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus incidunt temporibus enim corporis nulla tempore nobis maiores numquam, doloribus deleniti provident. Corrupti recusandae sit distinctio placeat dolor fugit incidunt dolorem?</p>
+                                            <div class="swiper bgSwiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <p class="fs-4 fw-bold">FACILITY</p>
+                                                        <!-- <p>Welcome to Alcom Facilities – a sprawling expanse spanning 150,000 square feet across multiple strategic locations. Our state-of-the-art facilities offer ample space for seamless production, warehousing, and logistics operations. Strategically positioned within 600 kilometers of the nearest seaport, our manufacturing unit ensures efficient import and export operations. At Alcom, we take pride in our onsite bonded warehouse, streamlining custom procedures and significantly reducing lead times. Explore a world of efficiency and reliability with Alcom Facilities.</p> -->
                                                     </div>
-                                                    <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 2">
-                                                        <p class="fs-4 m-0 fw-bold">EQUIPMENT </p>
-                                                        <p class="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia iure eos rem velit? Fugiat blanditiis, repellendus quod inventore voluptates optio a alias corporis quasi earum minima architecto aliquid unde.</p>
+                                                    <div class="swiper-slide">
+                                                        <p class="fs-4 fw-bold">EQUIPMENT </p>
+                                                        <!-- <p>Alcom is dedicated to cutting-edge manufacturing, featuring a range of specialized equipment such as Customized DRILLING machines, PLASTMAK Machines, ALPHTECH Machines, MIRAGE units, DECALUM MACHINES, and high-performing MILLING MACHINES. Our facility also includes FINISHING MACHINES, DRYER Machines, WAXING units, LASER systems, CLIPPING machines, and advanced Packing Machines. Complemented by vital auxiliary machinery, like Air Compressors, Diesel Generator, and Multiple Mechanical Presses, our commitment to precision and efficiency is evident. We take pride in creating a manufacturing environment where state-of-the-art equipment meets expertise, ensuring each product is crafted with unparalleled precision and quality. Welcome to a manufacturing experience that leverages technology for exceptional results.</p> -->
                                                     </div>
                                                 </div>
-                                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-                                            <div class="absolute_block">
-                                                <div style="width: fit-content;" class="bgSwiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
+                                            </div>
+                                            <div class="absolute_block gap-3">
+                                                <div class="bgImg-prev">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="bgImg-next">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -5582,6 +5591,11 @@
                 el: ".bgSwiper-pagination",
                 clickable: true
             },
+            navigation: {
+                nextEl: ".bgImg-next",
+                prevEl: ".bgImg-prev",
+            },
+            loop: true,
             // simulateTouch: false,
         });
 
