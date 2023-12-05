@@ -18819,7 +18819,8 @@
         }
 
         .elementor-15311 .elementor-element.elementor-element-a377d68:not(.elementor-motion-effects-element-type-background) {
-            background-image: url("https://www.pennarindia.com/img/people-1.jpg");
+            /* background-image: url("https://www.pennarindia.com/img/people-1.jpg"); */
+            background-image: url("/assets/img/people.png");
             background-repeat: no-repeat;
             background-size: cover;
         }
