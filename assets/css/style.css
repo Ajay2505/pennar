@@ -11651,7 +11651,7 @@
         }
 
         .footer-special-text {
-            font-family: 'Manrope Alt';
+            font-family: 'Manrope Alt' !important;
             font-weight: 700;
             letter-spacing: -.03em;
             font-size: 60px;
@@ -19074,7 +19074,7 @@
                 padding: 180px 40px 0
             }
             .elementor-15311 .elementor-element.elementor-element-6c65a26 {
-                bottom: 300px
+                bottom: -50px
             }
             .elementor-15311 .elementor-element.elementor-element-ca2f648 {
                 margin-top: 100px;
@@ -23089,9 +23089,9 @@
     text-transform: none;
     z-index: 99;
     background-color: #253d97 !important;
-    writing-mode: vertical-lr;
-    -webkit-writing-mode: vertical-lr; /* Safari and Chrome */
-    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl; 
+    -ms-writing-mode: tb-rl;
 }
 
 .fixed_btn::after {
@@ -23225,7 +23225,7 @@
 }
 
 .accordian_section .img_wrapper {
-    max-width: 400px;
+    max-width: 450px;
 }
 
 
@@ -23456,13 +23456,13 @@
     color: #333333;
 }
 
-.gsapScale {
+/* .gsapScale {
     transform: scale(.7);
-}
+} */
 
 
 .bgImg_section {
-    padding-bottom: 250px;
+    padding-bottom: 150px;
     padding-top: 200px;
 }
 
@@ -23529,4 +23529,127 @@
 .bgImg_section .bgSwiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: transparent;
     border: 1px solid #fff;
+}
+
+
+.capabilities .cap .img_wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.capabilities .cap .img_wrapper img {
+    object-fit: cover;
+    transition: transform .3s ease-in;
+}
+
+.capabilities .cap:hover .img_wrapper img {
+    transform: scale(1.07);
+}
+
+.capabilities .cap .img_wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .35);
+    transition: opacity .3s ease-in;
+}
+
+.capabilities .cap:hover .img_wrapper::before {
+    opacity: 0;
+}
+
+.capabilities .cap .absolute_block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 20%;
+    max-height: 70%;
+    color: #fff;
+    overflow-y: auto;
+    /* background-color: #253d97; */
+    transition: background-color .2s ease-in-out, right .3s ease-in-out, bottom .3s ease-in-out;
+}
+
+.capabilities .cap .absolute_block .title_wrapper {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.capabilities .cap:hover .absolute_block .title_wrapper .title {
+    /* padding-right: 30%; */
+}
+
+.capabilities .cap .absolute_block .title_wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 0;
+    background-color: #253d97;
+    transition: width .2s ease-in;
+}
+
+.capabilities .cap:hover .absolute_block .title_wrapper::before {
+    width: 100%;
+}
+
+
+.capabilities .cap:hover .absolute_block {
+    color: #fff;
+}
+
+.capabilities .cap .absolute_block .icon {
+    transition: transform .3s ease-in-out;
+}
+
+.capabilities .cap:hover .absolute_block .icon {
+    transform: rotate(90deg);
+}
+
+.capabilities .cap .absolute_block .hidden_block {
+    color: #fff;
+    padding-right: 20%;    
+    transition: margin-top .3s ease-in-out;
+}
+
+.capabilities .cap:hover .absolute_block .hidden_block {
+    margin-top: 10px;
+}
+
+.capabilities .cap .absolute_block .hidden_block * {
+    font-size: 0;
+    margin: 0;
+    transition: font-size .3s ease-in-out, margin-bottom .3s ease-in-out;;
+}
+
+.capabilities .cap:hover .absolute_block .hidden_block * {
+    font-size: initial;
+    margin-bottom: 7px;
+}
+/* 
+.cap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+} */
+
+@media only screen and (max-width: 900px) {
+    .capabilities .cap .absolute_block {
+        right: 0;
+        bottom: 0;
+        background-color: #253d97;
+    }   
+    .capabilities .cap .absolute_block .hidden_block {
+        margin-top: 10px;
+    }
+    .capabilities .cap .absolute_block .hidden_block * {
+        font-size: initial;
+        margin-bottom: 7px;
+    }
+}
+
+.mt-50 {
+    margin-top: 50px;
 }
